@@ -1,0 +1,184 @@
+/* Base Styles */
+html, body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 80px;  /* Height greater than or equal to the footer's height */
+    width: 100%;
+    min-height: 100%;
+    display: block;
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Slider Styling */
+.product-slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 80vw; /* Responsive base width of the slider */
+    max-width: 1200px; /* Maximum width slider can extend to */
+    margin: 0 auto; /* Centering the slider horizontally */
+    overflow: hidden; /* Hides anything outside the slider window */
+}
+
+.product-list {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product {
+    width: 20vw; /* Each product takes up 20% of the viewport width */
+    max-width: 300px; /* Maximum width each product can extend to */
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds shadow for depth */
+    text-align: center; /* Aligns text inside the product div */
+}
+
+.product img {
+    width: 100%; /* Ensures the image is responsive within the product div */
+    height: auto; /* Keeps the aspect ratio of the image */
+    max-width: 180px; /* Maximum width of the image */
+    max-height: 180px; /* Maximum height of the image */
+}
+
+/* Slider Navigation Buttons */
+.slide-btn {
+    cursor: pointer;
+    background-color: #444;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 768px) {
+    .product {
+        width: 40vw; /* Increases the size of products on smaller screens */
+    }
+
+    .product-slider {
+        width: 90vw; /* Allows the slider to occupy more width on smaller screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .product {
+        width: 25vw; /* Adjusts the product size for medium screens */
+    }
+}
+
+
+/* newsletter */
+.newsletter {
+    background-color: #f8f9fa;  /* Light grey background for subtle contrast */
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.newsletter h2 {
+    color: #444;
+    font-size: 24px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    width: 70%; /* Responsive width */
+}
+
+.newsletter button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Hover effect for button */
+.newsletter-form button:hover {
+    background-color: #004494;
+}
+
+@media (max-width: 768px) {
+    .newsletter input[type="email"] {
+        width: 90%; /* Full width on smaller screens */
+    }
+
+    .newsletter {
+        padding: 15px; /* Smaller padding on smaller screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .newsletter input[type="email"] {
+        width: 80%; /* Slightly larger width on medium screens */
+    }
+}
+
+.newsletter input[type="email"]:focus {
+    border-color: #0056b3; /* Highlight the input box when focused */
+}
+
+.newsletter button:active {
+    transform: scale(0.98); /* Subtle click effect on the button */
+}
+
